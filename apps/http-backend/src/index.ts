@@ -19,6 +19,9 @@ app.use(
     credentials: true,
   })
 );
+app.get("/", (req, res) => {
+  res.json({ message: "Hello World!" });
+});
 
 // Signup route
 app.post("/signup", async (req, res) => {
@@ -116,6 +119,6 @@ app.get("/room/:slug", async (req, res) => {
   res.json({ room });
 });
 
-app.listen(3001, () => {
+app.listen(3002, () => {
   console.log("Server is running on port 3001");
 });

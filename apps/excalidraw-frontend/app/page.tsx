@@ -4,7 +4,19 @@ import { ArrowRight, Zap, Shield, TrendingUp } from "lucide-react";
 export default function App() {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
+      {/* ===== Page Heading ===== */}
+      <header className="py-8 text-center border-b border-gray-800">
+        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+            Excalidraw Pro
+          </span>
+        </h1>
+        <p className="text-slate-400 mt-3 text-lg">
+          Next-generation collaborative whiteboard for creators and teams
+        </p>
+      </header>
+
+      {/* ===== Hero Section ===== */}
       <section className="pt-16 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           {/* Sign In / Sign Up Buttons at top */}
@@ -21,12 +33,12 @@ export default function App() {
             </Link>
           </div>
 
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+          <h2 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
             Draw, Collaborate, &{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
               Share
             </span>
-          </h1>
+          </h2>
 
           <p className="text-xl text-slate-300 mb-12 leading-relaxed max-w-2xl mx-auto">
             Real-time collaborative whiteboard for teams, educators, and
@@ -62,7 +74,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* ===== Features Section ===== */}
       <section id="features" className="py-20 px-6 bg-gray-900 rounded-t-3xl">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -114,7 +126,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* ===== CTA Section ===== */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -126,21 +138,17 @@ export default function App() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {/* Start Drawing */}
-
             <button className="group px-10 py-5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all hover:shadow-2xl flex items-center gap-3 text-lg font-medium">
               Start Drawing
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
 
-            {/* Sign In */}
             <Link href="/signin">
               <button className="px-10 py-5 bg-transparent text-blue-500 border border-blue-500 rounded-lg hover:bg-blue-500 hover:text-black transition-all text-lg font-medium">
                 Sign In
               </button>
             </Link>
 
-            {/* Sign Up */}
             <Link href="/signup">
               <button className="px-10 py-5 bg-blue-500 text-black rounded-lg hover:bg-blue-600 transition-all text-lg font-medium">
                 Sign Up
